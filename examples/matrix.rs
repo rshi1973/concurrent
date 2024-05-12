@@ -1,5 +1,5 @@
 use anyhow::Result;
-use current::{multiply_matrix, Matrix};
+use current::Matrix;
 
 fn main() -> Result<()> {
     let a = Matrix {
@@ -14,7 +14,7 @@ fn main() -> Result<()> {
         data: vec![1, 2, 3, 4, 5, 6],
     };
 
-    let c = multiply_matrix(&a, &b)?;
+    let c = a * b;
     println!("{:?}", c);
 
     Ok(())
